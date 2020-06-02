@@ -48,3 +48,12 @@ You should now see the app.
 [SuperGreenLab]: https://www.supergreenlab.com/
 [`flutter`]: https://flutter.dev/
 [Discord]: https://discord.gg/crdYzgy
+
+
+### Flutter Dockerized
+```bash
+docker run --rm -it -v ${PWD}:/build --workdir /build cirrusci/flutter:1.17.1
+flutter pub get
+flutter build apk --target-platform android-arm64 --split-per-abi
+```
+
