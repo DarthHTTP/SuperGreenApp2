@@ -130,7 +130,7 @@ class AppInitBloc extends Bloc<AppInitBlocEvent, AppInitBlocState> {
 
   void _allowAnalytics() async {
     await FlutterMatomo.initializeTracker(
-        'https://analytics.supergreenlab.com/piwik.php', 3);
+        'http://analytics.supergreenlab.com/piwik.php', 3);
     BlocSupervisor.delegate = AnalyticsBlocDelegate();
   }
 }
